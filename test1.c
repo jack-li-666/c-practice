@@ -1,7 +1,7 @@
 // #include <stdio.h>
-//  #ifdef _WIN32
-//   #include <windows.h>
-//   #endif
+ #ifdef _WIN32
+  #include <windows.h>
+  #endif
 // int main(){
 //   #ifdef _WIN32
 //     SetConsoleOutputCP(65001);
@@ -21,6 +21,7 @@
 // }
 
 
+
 // #include<stdio.h>
 // int main(){
 //   int num = 0;
@@ -34,3 +35,108 @@
 // }
 
 
+
+// #include<stdio.h> //分支两道热身
+// int main(){
+//     int num = 0;
+//     scanf("%d",&num);
+//     if(num == 0){
+//         printf("zero\n");
+//     }
+//     else if(num > 0){
+//         printf("positive\n");
+//     }
+//     else{
+//         printf("negative\n");
+//     }
+//     return 0;
+
+// }
+
+
+
+// #include<stdio.h>
+// int main(){
+//     int num1 = 0;
+//     int num2 = 0;
+//     int num3 = 0;
+//     scanf("%d%d%d",&num1,&num2,&num3);
+//     int max = num1;
+//     if(num2 > num1){
+//         max = num2;
+//     }
+//     if(num3 > max){
+//         max = num3;
+//     }
+//     printf("%d\n", max);
+//     return 0;
+// }
+
+
+
+// #include<stdio.h>        //分支三道主菜
+// int main(){
+//     int store = 0;
+//     scanf("%d",&store);
+//     if(store >= 90){
+//         printf("A");
+//     }
+//     else if(store >= 80){
+//         printf("B");
+//     }
+//     else if(store >= 70){
+//         printf("C");
+//     }
+//     else if(store >= 60){
+//         printf("D");
+//     }
+//     else if(store >= 0){
+//         printf("E");
+//     }    
+//     return 0;
+// }
+
+
+
+// #include<stdio.h>
+// int main(){
+//     int x = 0;
+//     int y = 0;
+//     scanf("%d",&x);
+//     if(x  < 0){
+//         y = -x;
+//     }
+//     if(x < 10 && x >=0){
+//         y = x * x;
+//     }
+//     if(x < 20 && x >= 10){
+//         y = 2 * x + 1;
+//     }
+//     if(x >= 20){
+//         y = 100;
+//     }
+//     printf("%d\n",y);//这个程序用 else if 更好
+// }
+    
+
+
+#include<stdio.h>
+int main(){
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    scanf("%d%d%d",&a,&b,&c);
+    if(a + b > c && a + c > b && b + c > a , a == b && b == c){
+        printf("equilateral");
+    }
+    if(a + b > c && a + c > b && b + c > a , a == b || a == c || b == c){ //这里用else if(a == b || a == c || b == c)且这里等腰必须写在等边前面，不改了
+        printf("isosceles");
+    }
+    if(a + b <= c || a + c <= b || b + c <= a){
+        printf("not a triangle");
+    }
+    else {
+        printf("scalene");
+    }
+    return 0; //这个先走非三角形再用else if会简洁很多
+}

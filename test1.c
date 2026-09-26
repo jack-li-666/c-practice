@@ -1,6 +1,13 @@
 #include <stdio.h>
-
+ #ifdef _WIN32
+  #include <windows.h>
+  #endif
 int main(){
+  #ifdef _WIN32
+    SetConsoleOutputCP(65001);
+    #endif
+
+
     float f; //华氏温度
     float c; //摄氏温度
 

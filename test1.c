@@ -120,23 +120,66 @@
     
 
 
-#include<stdio.h>
+// #include<stdio.h>
+// int main(){
+//     int a = 0;
+//     int b = 0;
+//     int c = 0;
+//     scanf("%d%d%d",&a,&b,&c);
+//     if(a + b > c && a + c > b && b + c > a , a == b && b == c){
+//         printf("equilateral\n");
+//     }
+//     if(a + b > c && a + c > b && b + c > a , a == b || a == c || b == c){ //这里用else if(a == b || a == c || b == c)且这里等腰必须写在等边前面，不改了
+//         printf("isosceles\n");
+//     }
+//     if(a + b <= c || a + c <= b || b + c <= a){
+//         printf("not a triangle\n");
+//     }
+//     else {
+//         printf("scalene\n");
+//     }
+//     return 0; //这个先走非三角形再用else if会简洁很多
+// }
+
+
+// #include<stdio.h>  //分支三道挑战
+// int main(){
+//     int a = 0;
+//     int b = 0;
+//     char c;
+//     scanf("%d %c%d",&a,&c,&b);
+//     switch(c){
+//       case '+': printf("%d\n", a + b); break;
+//       case '-': printf("%d\n", a - b); break;
+//       case '/': printf("%.2f\n", (double)a / b); break; //这里用了强制类型转换
+//       case '*': printf("%d\n", a * b); break;
+//       default: printf("运算符不认识\n"); break;  //这里防止出现别的符号无法输出
+//     }
+//     return 0;
+// }
+
+
+#include<stdio.h> 
 int main(){
-    int a = 0;
-    int b = 0;
-    int c = 0;
-    scanf("%d%d%d",&a,&b,&c);
-    if(a + b > c && a + c > b && b + c > a , a == b && b == c){
-        printf("equilateral");
-    }
-    if(a + b > c && a + c > b && b + c > a , a == b || a == c || b == c){ //这里用else if(a == b || a == c || b == c)且这里等腰必须写在等边前面，不改了
-        printf("isosceles");
-    }
-    if(a + b <= c || a + c <= b || b + c <= a){
-        printf("not a triangle");
+  int year = 0;
+  int month = 0;
+  scanf("%d%d",&year,&month);
+  switch(month){
+    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+    printf("31\n");
+    break;
+    case 4: case 6: case 9: case 11:
+    printf("30\n");
+    break;
+    case 2:
+    if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)){
+      printf("29\n");
     }
     else {
-        printf("scalene");
+      printf("28\n");
     }
-    return 0; //这个先走非三角形再用else if会简洁很多
+    break;  
+  }
+  return 0;
 }
+

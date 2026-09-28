@@ -2,3 +2,6 @@
 *.exe
 *.o
 *.obj
+
+# 本地工具脚本
+fix-github.bat

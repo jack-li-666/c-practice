@@ -3,9 +3,9 @@
   #include <windows.h>
   #endif
 // int main(){
-//   #ifdef _WIN32
-//     SetConsoleOutputCP(65001);
-//     #endif
+  // #ifdef _WIN32
+  //   SetConsoleOutputCP(65001);
+  //   #endif
 
 
 //     float f; //华氏温度
@@ -338,3 +338,119 @@
 //   }
 //   return 0;
 // }
+
+
+// #include<stdio.h>   //	输入 n 和 n 个数，输出它们的和，以及平均数（保留 2 位小数）
+// int main(){
+//     // #ifdef _WIN32
+//     // SetConsoleOutputCP(65001);
+//     // #endif
+//   int n = 0;
+//   // printf("请输入数字个数 n: ");
+//   scanf("%d",&n);
+//   int a[1005];
+//   int sum = 0;
+//   // printf("请输入 %d 个数字: ", n); 
+//   for(int i = 0; i < n; i++){
+//     scanf("%d",&a[i]);
+//   }
+//   for(int i = 0; i < n; i++){
+//     sum = sum + a[i];
+//   }
+//     printf("%d\n", sum);
+//     double mean = (double)sum / n;
+//     printf("%.2f\n", mean);    
+//   return 0; 
+// }
+
+
+
+// #include<stdio.h>   //	输入 n 和 n 个数，输出最大值和最小值
+// int main(){
+//   int n = 0;
+//   scanf("%d",&n);
+//   int a[1005];
+//   for(int i = 0; i < n; i++){
+//     scanf("%d",&a[i]);
+//   }
+//   int max = a[0];
+//   int min = a[0];
+//   for(int i = 0; i < n; i++){
+//     if(a[i] > max){
+//       max = a[i];
+//     }
+//     if(a[i] < min){
+//       min = a[i];
+//     }                                                                           
+//   }
+//     printf("%d\n", max);
+//     printf("%d\n", min);
+//   return 0;
+// }
+
+
+
+// #include<stdio.h>   // 	输入 n 和 n 个数，倒序输出（用下标控制）	反向遍历
+// int main(){
+//   int n = 0;
+//   scanf("%d", &n);
+
+//   int a[1005];
+//   for(int i = 0; i < n; i++){
+//     scanf("%d", &a[i]);
+//   }
+//   for(int i = n - 1; i >= 0; i--){
+//     printf("%d\n", a[i]);
+//   }
+//   return 0;
+// }
+
+
+// #include<stdio.h>  // 	输入 n 和 n 个数，统计有多少个数大于平均数	两个循环
+// int main(){
+//   int n = 0;
+//   scanf( "%d",&n);
+//   int a[1005];
+//   for(int i = 0; i < n; i++){
+//     scanf("%d", &a[i]);
+//   }
+//   int cnt = 0;
+//   int sum = 0;
+//   for(int i = 0; i < n; i++){
+//     sum += a[i];
+//   }
+//   double mean = (double)sum / n;
+//   for(int i = 0; i < n; i++){
+//     if(a[i] > mean){
+//       cnt += 1;
+//     }
+//   }
+//   printf("%d\n", cnt);
+//   return 0;
+// }
+
+
+// #include<stdio.h>   //冒泡排序
+// int main(){
+//   int n = 0;
+//   scanf("%d",&n);
+//   int a[1005];
+//   for(int i = 0; i < n; i++){
+//     scanf("%d", &a[i]);}
+//   for(int i = 0; i < n; i++){
+//     for(int j = 0; j < n - 1 - i; j++){
+//       if(a[j] > a[j + 1]){
+//         int k = a[j];
+//         a[j] = a[j + 1];
+//         a[j + 1] = k;
+//       }
+//     }
+//   }
+//   for(int i = 0; i < n; i++){
+//     printf("%d", a[i]);
+//   }
+//   return 0;
+// }
+
+
+

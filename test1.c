@@ -159,27 +159,182 @@
 // }
 
 
-#include<stdio.h> 
-int main(){
-  int year = 0;
-  int month = 0;
-  scanf("%d%d",&year,&month);
-  switch(month){
-    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-    printf("31\n");
-    break;
-    case 4: case 6: case 9: case 11:
-    printf("30\n");
-    break;
-    case 2:
-    if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)){
-      printf("29\n");
-    }
-    else {
-      printf("28\n");
-    }
-    break;  
-  }
-  return 0;
-}
+// #include<stdio.h> 
+// int main(){
+//   int year = 0;
+//   int month = 0;
+//   scanf("%d%d",&year,&month);
+//   switch(month){
+//     case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+//     printf("31\n");
+//     break;
+//     case 4: case 6: case 9: case 11:
+//     printf("30\n");
+//     break;
+//     case 2:
+//     if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)){
+//       printf("29\n");
+//     }
+//     else {
+//       printf("28\n");
+//     }
+//     break;  
+//   }
+//   return 0;
+// }
 
+
+// #include<stdio.h>
+// int main(){
+//   int a = 0;
+//   scanf("%d",&a);
+//   int ge = a % 10;
+//   int shi = a / 10 % 10;
+//   int bai = a / 100;
+//   if(ge * ge * ge + shi * shi *shi + bai * bai * bai == a){
+//     printf("yes\n");
+//   }
+//   else{
+//     printf("no\n");
+//   }
+//   return 0;
+// }
+
+
+
+// #include<stdio.h> //输入 n，输出 1~n 的和
+// int main(){     
+//   int sum = 0;  //数更大时要用 long long sum = 0;
+//   int n = 0;
+//   scanf("%d",&n);
+//   for(int i = 1; i <= n; i++){
+//     sum = sum + i;
+//   }
+//   printf("%d\n",sum);
+//   return 0;
+// }
+
+
+
+// #include<stdio.h>   //输入 n，输出 n!（n 的阶乘）
+// int main(){
+//   int num = 1;
+//   int n = 0;
+//   scanf("%d",&n);
+//   for(int i = 1; i <= n; i++){
+//     num = num * i;
+//   }
+//   printf("%d\n",num);
+//   return 0;
+// }
+
+
+// #include<stdio.h>  //输入 n，输出 1~n 中所有偶数
+// int main(){
+//   int n = 0;
+//   scanf("%d",&n);
+//   for(int i = 2; i <= n; i += 2){
+//     printf("%d\n",i);
+//   }
+//   return 0;
+// }
+
+
+
+// #include<stdio.h>  //输入 n，统计 1~n 中有多少个数能被 3 整除
+// int main(){
+//   int cnt = 0;  //这里cnt是指counter，计数器
+//   int n = 0;
+//   scanf("%d",&n);
+//   for(int i = 1; i <= n; i++){
+//     if(i % 3 == 0){
+//       cnt += 1;
+//     }
+//   }
+//   printf("%d\n",cnt);
+//   return 0;
+// }
+
+
+
+// #include<stdio.h>  //输入 n，判断是不是素数
+// int main(){
+//   int n = 0;
+//   scanf("%d",&n);
+//   if(n < 2){
+//     printf("no\n");
+//     return 0;
+//   }
+//     int su = 1;
+//     for(int i = 2; i < n; i++){
+//       if(n % i == 0){
+//         su = 0;
+//         break;
+//       }
+//     }
+//     if(su == 1){
+//       printf("yes\n");
+//     }
+//     else{
+//       printf("no\n");
+//     }
+//   return 0; 
+// }
+
+
+
+// #include<stdio.h>   //输入一个正整数，把它倒过来逐个输出
+// int main(){
+//   int num = 0;
+//   scanf("%d",&num);
+//   while(num > 0){
+//     int a = num % 10;
+//     printf("%d  ", a);
+//     num = num / 10;
+//   }
+//   return 0;
+// }
+
+
+// #include<stdio.h>   //输入一个正整数，把它正过来逐个输出
+// int main(){
+//   int num = 0;
+//   scanf("%d",&num);
+//   int p = 1;
+//   while(num / p >= 10){
+//     p *= 10;
+//   }
+//   while(p > 0){
+//     printf("%d ",num / p % 10);
+//     p /= 10;
+//   }
+//   return  0; 
+// }
+
+
+
+// #include<stdio.h>   //星号三角形（输入 n，第 i 行打 i 个 *）
+// int main(){
+//   int num = 0;
+//   scanf("%d",&num);
+//   for(int i = 1; i <= num; i++){
+//     for(int j = 1; j <= i; j++){
+//       printf("*");
+//     }
+//     printf("\n");
+//   }
+//   return 0;
+// }
+
+
+// #include<stdio.h>    //输出九九乘法表。第 i 行有 i 个算式
+// int main(){
+//   for(int a = 1; a <= 9; a++){
+//     for(int b = 1; b <= a; b++){
+//       int c = a * b;
+//       printf("  %d*%d=%d", a, b, c);
+//     }
+//     printf("\n");
+//   }
+//   return 0;
+// }

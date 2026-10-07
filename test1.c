@@ -430,27 +430,138 @@
 // }
 
 
-#include<stdio.h>   //冒泡排序
-int main(){
-  int n = 0;
-  scanf("%d",&n);
-  int a[1005];
-  for(int i = 0; i < n; i++){
-    scanf("%d", &a[i]);}
-  for(int i = 0; i < n; i++){
-    for(int j = 0; j < n - 1 - i; j++){
-      if(a[j] > a[j + 1]){
-        int k = a[j];
-        a[j] = a[j + 1];
-        a[j + 1] = k;
-      }
-    }
-  }
-  for(int i = 0; i < n; i++){
-    printf("%d", a[i]);
-  }
-  return 0;
-}
+// #include<stdio.h>   //冒泡排序
+// int main(){
+//   int n = 0;
+//   scanf("%d",&n);
+//   int a[1005];
+//   for(int i = 0; i < n; i++){
+//     scanf("%d", &a[i]);}
+//   for(int i = 0; i < n; i++){
+//     for(int j = 0; j < n - 1 - i; j++){
+//       if(a[j] > a[j + 1]){
+//         int k = a[j];
+//         a[j] = a[j + 1];
+//         a[j + 1] = k;
+//       }
+//     }
+//   }
+//   for(int i = 0; i < n; i++){
+//     printf("%d", a[i]);
+//   }
+//   return 0;
+// }
 
 
 
+
+// #include<stdio.h>    //输入 3×3 矩阵，输出所有元素之和	双下标遍历
+// int main(){
+//   int a[100][100]; 
+//   for(int i = 0; i < 3; i++){
+//     for(int j = 0; j < 3; j++){
+//       scanf("%d", &a[i][j]);
+//     }
+//   }
+//   int sum = 0;
+//   for(int i = 0; i < 3; i++){
+//     for(int j = 0; j < 3; j++){
+//       sum += a[i][j];
+//     }   
+//   }
+//     printf("%d\n", sum);
+//   return 0;
+// }
+
+
+// #include<stdio.h>   //输入 3×4 矩阵，输出每行之和，每行一个数	累加器位置
+// int main(){
+//   int a[100][100];
+//   for(int i = 0; i < 3; i++){
+//     for(int j = 0; j < 4; j++){
+//       scanf("%d", &a[i][j]);
+//     }
+//   }
+//   for(int i = 0; i < 3; i++){
+//     int sum = 0;
+//     for(int j = 0; j < 4; j++){
+//       sum += a[i][j];
+//     }
+//       printf("%d\n", sum);
+//   }
+//   return 0;
+// } 
+
+
+
+// #include<stdio.h>   //输入 4×4 矩阵，输出两条对角线之和	下标规律
+// int main(){
+//   int a[100][100];
+//   for(int i = 0; i < 4; i++){
+//     for(int j = 0; j < 4; j++){
+//       scanf("%d", &a[i][j]);
+//     }
+//   }
+//   int sum1 = 0;
+//   for(int i = 0; i < 4; i++){
+//     for(int j = 0; j < 4; j++){
+//       if(i == j){
+//         sum1 += a[i][j]; 
+//       }
+//     }
+//   }
+//   printf("%d\n", sum1);
+
+//   int sum2 = 0;
+//   for(int i = 0; i < 4; i++){
+//     for(int j = 0; j < 4; j++){
+//       if(i == 3 - j){
+//         sum2 += a[i][j]; 
+//       }
+//     }
+//   }
+//   printf("%d\n", sum2);
+
+//   return 0;
+// }
+// * 你的写法：16 次循环 + 判断 */
+// for(int i = 0; i < 4; i++){
+//     for(int j = 0; j < 4; j++){
+//         if(i == j) sum1 += a[i][j];
+//     }
+// }
+
+// /* 更好的写法：4 次循环，没有判断 */
+// for(int i = 0; i < 4; i++){
+//     sum1 += a[i][i];          // 主对角线，行号=列号，直接算出来
+//     sum2 += a[i][3 - i];      // 副对角线，列号 = 3-i
+// }
+
+
+
+
+
+// #include<stdio.h>  //输入 n×m 矩阵，输出最大值和它所在的行、列	擂台 + 双下标
+// int main(){
+//   int a[100][100];
+//   int n , m;
+//   scanf("%d%d", &n, &m);
+//   for(int i = 0; i < n; i++){
+//     for(int j = 0; j < m; j++){
+//       scanf("%d", &a[i][j]);
+//     }
+//   }
+//   int max = a[0][0];
+//   int h = 0, l = 0;
+//   for(int i = 0; i < n; i++){
+//     for(int j = 0; j < m; j++){
+//       if(a[i][j] > max){
+//         max = a[i][j];
+//         h = i;
+//         l = j;
+//       }
+//     }
+//   }
+//   printf("%d\n%d\n%d\n", max, h, l);
+//   return 0;
+// }

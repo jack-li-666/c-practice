@@ -1,7 +1,7 @@
 // #include <stdio.h>
- #ifdef _WIN32
-  #include <windows.h>
-  #endif
+//  #ifdef _WIN32
+//   #include <windows.h>
+//   #endif
 // int main(){
   // #ifdef _WIN32
   //   SetConsoleOutputCP(65001);
@@ -563,5 +563,82 @@
 //     }
 //   }
 //   printf("%d\n%d\n%d\n", max, h, l);
+//   return 0;
+// }
+
+
+
+ 
+
+
+// #include<stdio.h>   // 2	输入一个字符串，逐字符打印，每个字符后加一个空格	遍历
+// int main(){
+//   char s[100];
+//   scanf("%s", s);
+//   for(int i = 0; s[i] != '\0'; i++){
+//     printf("%c ", s[i]);
+//   }
+//   printf("\n");
+//   return 0;
+// }
+
+
+
+
+// #include<stdio.h>   // 3	输入一个字符串，统计其中大写字母、小写字母、数字、其他各多少个	字符范围判断
+// int main(){
+//   char s[100];
+//   scanf("%s", s);
+//   int da = 0;
+//   int xiao = 0;
+//   int shu = 0;
+//   int ta = 0;
+//   for(int i = 0; s[i] != '\0'; i++){
+//     if(s[i] >= 'a' && s[i] <= 'z'){
+//       xiao += 1;
+//     }
+//     else if(s[i] >= 'A' && s[i] <= 'Z'){
+//       da += 1;
+//     }
+//     else if(s[i] >= '0' && s[i] <= '9'){
+//       shu += 1;
+//     }
+//     else{
+//       ta += 1;
+//     }
+//   }
+//   printf("%d %d %d %d\n", da, xiao, shu, ta);
+//   return 0;
+// }
+
+
+
+// #include<stdio.h>   // 4	输入一个字符串，倒序输出	反向遍历
+// #include<string.h>
+// int main(){
+//   char s[100];
+//   scanf("%s", s);
+//   int a = strlen(s);
+//   for(int i = a-1; i >= 0; i--){
+//     printf("%c ", s[i]);
+//   }
+//   printf("\n");
+//   return 0;
+// }
+
+
+
+// #include<stdio.h>   // 5	输入两个字符串，判断它们是否相同	strcmp
+// #include<string.h>
+// int main(){
+//   char a[100];
+//   char b[100];
+//   scanf("%s%s", a, b);
+//   if(strcmp(a, b) == 0){
+//     printf("yes\n");
+//   }
+//   else{
+//     printf("no\n");
+//   }
 //   return 0;
 // }
